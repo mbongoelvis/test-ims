@@ -1,0 +1,15 @@
+*{
+  box-sizing: border-box;
+  font-family: inter, open sans;
+}
+.nested {
+  background-color: none;
+  color: white;
+}
+
+.nested.active{
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #5B66FF;
+  color: white;
+}
