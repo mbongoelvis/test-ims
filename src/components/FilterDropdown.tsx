@@ -12,23 +12,21 @@ import {
 } from "@/components/ui/popover";
 
 interface FilterDropdownProps {
-  filterDate: string[];
+  filterData: string[];
   selected: string;
   onSelectFilter: (value: string) => void;
   className: string;
   useDate: boolean;
 }
 
-export const FilterDropdown = ({ filterDate, useDate, selected, onSelectFilter, className}: FilterDropdownProps) => {
+export const FilterDropdown = ({ filterData, useDate, selected, onSelectFilter, className}: FilterDropdownProps) => {
   const [selectedValue, setSelectedValue] = React.useState<string>(
-    selected || filterDate[0]
+    selected || filterData[0]
   );
 
-  console.log(selectedValue);
-
   useEffect(() => {
-    setSelectedValue(selected || filterDate[0]);
-  }, [selected, filterDate]);
+    setSelectedValue(selected);
+  }, [selected, filterData]);
 
   // Handle change and immediately send the value to the parent
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -47,7 +45,7 @@ export const FilterDropdown = ({ filterDate, useDate, selected, onSelectFilter, 
           onChange={handleChange}
           value={selectedValue}
         >
-          {filterDate?.map((item, index) => (
+          {filterData?.map((item, index) => (
             <option value={item} key={index}>
               {item}
             </option>

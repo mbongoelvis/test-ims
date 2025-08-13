@@ -173,7 +173,7 @@ export const Assets = () => {
 
         {/* Data Table Section */}
         <div className="w-full">
-          <DataTable columns={columns} data={data} />
+          <DataTable  columns={columns} data={data} />
         </div>
       </div>
     </>

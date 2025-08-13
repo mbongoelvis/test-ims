@@ -30,13 +30,13 @@ import {
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
   data: TData[];
-  filterDate: string[]
+  filterData: string[]
 }
 
 export function DataTable<TData, TValue>({
   columns,
   data,
-  filterDate
+  filterData
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([])
@@ -76,17 +76,7 @@ export function DataTable<TData, TValue>({
             />
           </div>
           {/* filter stuff and others */}
-          <div className="border-[#D5D5D5] w-full flex border-[1px] items-center justify-between rounded-full px-6">
-            <FilterDropdown useDate={true} filterDate={filterDate} />
-            {/* reset filter */}
-            <button
-              className="text-sm hover:opacity-75 flex items-center gap-2 cursor-pointer"
-              onClick={() => setGlobalFilter("")}
-            >
-              Reset
-              <FaRotateLeft className="opacity-90" />
-            </button>
-          </div>
+         
         </div>
 
         {/* Mobile: Show pagination info */}
