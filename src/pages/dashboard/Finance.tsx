@@ -13,7 +13,7 @@ import { columns } from "@/components/table/FinanceTransactions/Columns";
 
 export const Finance = () => {
   // filter data
-  const filterDate = ["Expenses", "Income"];
+  const filterData = ["Expenses", "Income"];
   // date data
   const data = [
     {
@@ -203,7 +203,7 @@ export const Finance = () => {
 
       {/* ========== finance table ========== */}
       <div className="mt-7">
-        <DataTable columns={columns} filterDate={filterDate} data={data} />
+        <DataTable columns={columns} filterData={filterData} data={data} />
       </div>
     </div>
   );
