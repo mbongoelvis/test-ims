@@ -12,11 +12,12 @@ export const AddFinanceCategories = () => {
           <div className="w-full ">
             <p className="text-sm font-medium text-gray-700">Finance Type</p>
             <FilterDropdown
-              filterDate={data}
+              filterData={data}
               className="rounded-md border-2 w-full px-2 mt-1 h-9 border-dsecondary-20"
             />
           </div>
           <InputField
+            id='mimbo'
             label="Finance Category"
             placeholder="Enter category name"
           />
